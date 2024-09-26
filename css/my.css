@@ -1,0 +1,475 @@
+/* hauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+
+.content-down-banner-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    /* Màu nền của banner */
+    border-radius: 70px;
+    /* Bo tròn các góc của banner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hiệu ứng nổi */
+    /* margin-left: 24px;
+    margin-right: 24px; */
+}
+
+.search-1-footer {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-ip-footer {
+    width: 600px;
+    padding: 10px 20px;
+    border: none;
+    /* Loại bỏ đường viền mặc định */
+    border-radius: 25px;
+    /* Bo tròn góc trái */
+    font-size: 16px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.search-ip:focus {
+    outline: none;
+    /* Loại bỏ viền mặc định khi focus */
+}
+
+.search-radius-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    background-color: rgb(211, 211, 211);
+    border-radius: 70px;
+    /* Bo tròn góc phải */
+    opacity: 0.7;
+}
+
+.bi-search-footer {
+    color: white;
+}
+
+.jobs-content-2-main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 128px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInLeft 1s forwards;
+}
+
+.jobs-content-mobile {
+    display: none;
+}
+
+
+
+
+.footer-container {
+    padding-top: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto;
+    padding: 0  ; */
+    width: 100%;
+    height: auto;
+    background-color: #F5F6F6;
+}
+
+
+
+.jobs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto;
+    padding: 0  ; */
+    width: 100%;
+    height: auto;
+    background-color: #F5F6F6;
+    transition: background-color 1s ease;
+}
+
+
+.jobs-content-up {
+    max-width: 1320px;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    /* padding: 100px 100px 0px 140px;  */
+}
+
+.jobs-content-2 {
+    letter-spacing: 1.3px;
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #677B93;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInLeft 1s forwards;
+}
+
+/* sua o dayyyyyyyyyyyyyyyyyyyyyyy */
+
+.jobs-content-2-child:hover {
+    color: white;
+
+}
+
+.jobs-content-2-child:hover .bi-dot,
+.jobs-content-2-child:hover .arrow-jobs {
+
+    fill: white;
+}
+
+.bi-dot {
+    margin-bottom: 5px;
+}
+
+
+.arrow-jobs {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+}
+
+/* da sua o day kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk */
+/* .jobs-content-1 {
+    padding-bottom: 20px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+} */
+.jobs-content-1 {
+    display: flex;
+    justify-content: space-between;
+    /* Căn đều khoảng cách giữa các phần tử con */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    width: 100%;
+    height: auto;
+}
+
+.jobs-content-right {
+    max-width: 100%;
+    margin-top: 38px;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slideInUp 1s forwards;
+    
+}
+
+#jobs-search {
+    width: auto;
+    height: 80px;
+}
+
+#search-down-footer {
+    max-width: 400px;
+}
+
+.jobs-last-content {
+    padding-top: 10px;
+    border-top: 1px solid 7094A7;
+    height: 200px;
+    display: flex;
+    border-top: 1px solid rgb(185, 181, 181);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInLeft 1s forwards;
+}
+.jobs-last-content1 {
+    padding-top: 10px;
+    border-top: 1px solid 7094A7;
+    height: 200px;
+    display: flex;
+    border-top: 1px solid rgb(185, 181, 181);
+    /* opacity: 0; */
+    /* transform: translateX(-100%);
+    animation: slideInLeft 1s forwards; */
+}
+
+#arrow-footer {
+    color: 7094A7;
+    margin: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.footer {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #F5F6F6;
+}
+
+.footer-content {
+    font-size: 15px;
+    color: #232323;
+    padding: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding-top: 35px;
+    margin-left: 24px;
+    margin-right: 24px;
+    border-top: 1px solid rgb(185, 181, 181);
+}
+
+
+/* .footer {
+    max-width: 1128px;
+    padding: 0px 100px 30px 140px;
+} */
+
+.footer-underline-text {
+    text-decoration: underline !important;
+    font-size: 15px !important;
+    color: #232323 !important;
+}
+
+
+
+
+.footer-list {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mother-child {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin-bottom: 50px;
+    padding-left: 50px;
+}
+
+.list-child {
+    /* padding: 4px; */padding-right: 10px;
+    gap: 10px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    line-height: 26px;
+    color: #1c1e21;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-basis: 45%;
+    flex-grow: 1;
+}
+
+.list-child a:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
+    color: #1c1e21;
+}
+
+.hover-p {
+    color: #1c1e21;
+}
+
+.list-wild-child {
+    padding-left: 0px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 120px;
+    line-height: 17px;
+    color: #1c1e21;
+    align-items: center;
+}
+
+
+
+.list-wild-child .a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.wild-child-1 {
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.jobs-left-content {
+    letter-spacing: 4.3px;
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #677B93;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slideInUp 1s forwards;
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.jobs-content-2-child {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    /* flex: 1 1 auto; Đảm bảo các phần tử con có chiều rộng tự động */
+    box-sizing: border-box;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: #232323;
+    transition: background-color 0.3s ease;
+    /* Thêm hiệu ứng chuyển đổi */
+}
+
+.jobs-content-2-child p {
+    font-weight: 600;
+    font-size: 48px;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    letter-spacing: 1.3px;
+}
+
+.jobs-content-2-child svg {
+    margin-left: 10px;
+}
+
+#see-all-jobs {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #7094A7;
+    font-weight: 600;
+    cursor: pointer;
+    padding-top: 17px;
+}
+
+@media (max-width: 768px) {
+    .jobs-content-2-main {
+        display: none;
+    }
+    .jobs-content-2{
+        display: none;
+    }
+    .jobs-content-mobile {
+        display: block;
+        flex-direction: column;
+    }
+
+    .content-down-banner-footer {
+        max-width: 100%;
+        /* Đảm bảo phần tử có thể co giãn theo kích thước màn hình */
+        width: 100%;
+        /* max-height: 42px; */
+    }
+
+    .content-mobile {
+        display: flex;
+        margin: 0 4vw;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(185, 181, 181);
+        
+    }
+
+    .content-mobile p {
+        font-weight: 600;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #344854;
+        margin-bottom: 5px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    /* .jobs-left-content{
+        margin-right: ;
+    } */
+    /* //////////////////////////sdddddddddddddddddđ */
+    .jobs-content-1 {
+
+        display: flex;
+        flex-direction: column;
+        align-items: none;
+        justify-content: none;
+    }
+
+    .jobs-left-content {
+        text-align: left;
+        margin-left: 24px;
+    }
+
+    .search-ip-footer {
+        padding: 4px 12px;
+        /* Thu nhỏ padding khi màn hình nhỏ hơn 768px */
+        font-size: 14px;
+        /* Giảm kích thước chữ */
+        width: 220px;
+    }
+
+    .bi--footersearch {
+        width: 15px;
+        /* Giảm kích thước icon */
+        height: 15px;
+    }
+
+    .search-radius {
+        padding: 4px;
+    }
+
+    \ .footer-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .mother-child {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 24px;
+        margin-bottom: 0px;
+
+    }
+
+    .list-child,
+    .list-wild-child {
+        width: 45%;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+.list-wild-child{
+    padding-left: 20px;
+}
+    .jobs-content-2-child {
+        flex: 1 1 100%;
+        /* Chiều rộng 100% khi màn hình nhỏ hơn 768px */
+    }
+}

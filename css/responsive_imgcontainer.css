@@ -1,4 +1,5 @@
 @media (max-width: 2496px) {
+
     /* Các quy tắc CSS cho desktop lớn */
     .content-left-top {
         padding-left: 100px;
@@ -25,7 +26,7 @@
     }
 
     .contact-content {
-        text-align:left;
+        text-align: left;
         width: 93%;
         padding-top: 80px;
     }
@@ -36,22 +37,22 @@
     }
 
     .contact-container {
-        height: 450px;
+        height: 100%;
 
     }
 
     .contact-row {
         gap: 20px;
-        width:2300px;
+        width: 5000px;
 
     }
 
     .contact-info {
-        width: 100% 
+        max-width: 2200px;
     }
 
     .contact-row-content {
-        width: 100%;
+        width: 1200px;
         display: flex;
         padding: 10px 0;
         border-top: 1px solid rgb(185, 181, 181);
@@ -60,22 +61,18 @@
         align-items: center;
     }
 
-    .contact-info {
-        width: 100%;
-    }
-
 
     .image-container {
         display: flex;
         max-width: 2300px;
-        height: 1000px;
+        height: 1200px;
         overflow-x: hidden;
         justify-content: center;
         gap: 20px;
     }
 
     .employ-img {
-        height: 1000px;
+        height: 85%;
     }
 
     .text-overlay {
@@ -98,11 +95,22 @@
 
     }
 
-    .icon-right {
+    .icon-right-1 {
         padding-right: 26px;
         width: 24px;
         height: 24px;
 
+    }
+
+    .bi-arrow-right-circle1 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .text-readmore {
+        padding: 10px;
+        font-size: 20px;
+        padding-top: 60px;
     }
 
     .read-more {
@@ -112,11 +120,10 @@
         left: 10px;
 
     }
-
-    .text-readmore {
-        padding: 10px;
+    .read-more p{
+        padding-top: 20px;
     }
-    
+
     .content-right {
         max-width: 1000px;
         align-items: center;
@@ -124,20 +131,21 @@
         padding-right: 120px;
         text-align: left;
     }
+
     .employ-container {
         max-width: 100%;
         width: 100%;
         height: 1500px;
-         background-color: #e5e5e5;
+        background-color: #e5e5e5;
         display: flex;
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
     }
-
-
 }
-@media (max-width: 1680px) {
+
+@media (max-width: 1920px) {
+
     /* Các quy tắc CSS cho desktop lớn */
     .content-left-top {
         padding-left: 100px;
@@ -164,7 +172,143 @@
     }
 
     .contact-content {
-        text-align:left;
+        text-align: left;
+        width: 93%;
+        padding-top: 80px;
+    }
+
+    .contact-container p {
+        text-align: left;
+
+    }
+
+    .contact-container {
+        height: 100%;
+
+    }
+
+    .contact-row {
+        gap: 20px;
+        width: 5000px;
+
+    }
+
+    .contact-info {
+        max-width: 1700px;
+    }
+
+    .contact-row-content {
+        width: 1200px;
+        display: flex;
+        padding: 10px 0;
+        border-top: 1px solid rgb(185, 181, 181);
+        border-bottom: 1px solid rgb(185, 181, 181);
+        position: relative;
+        align-items: center;
+    }
+
+
+    .image-container {
+        display: flex;
+        max-width: 2300px;
+        height: 1200px;
+        overflow-x: hidden;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .employ-img {
+        height: 85%;
+    }
+
+    .text-overlay {
+        width: 50%;
+        padding-bottom: 0px;
+        padding-left: 20px;
+
+        h2 {
+
+            font-size: 40px;
+            padding-left: 0px;
+            padding-bottom: 40px;
+        }
+
+        p {
+            padding-left: 0px;
+            font-size: 22px;
+            padding-bottom: 100px;
+        }
+
+    }
+
+    .icon-right-1 {
+        padding-right: 26px;
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .read-more {
+        padding-left: 20px;
+        top: 0px;
+        font-size: 18px;
+        left: 10px;
+
+    }
+
+    .text-readmore {
+        padding: 10px;
+    }
+
+    .content-right {
+        max-width: 1000px;
+        align-items: center;
+        justify-content: center;
+        padding-right: 120px;
+        text-align: left;
+    }
+
+    .employ-container {
+        max-width: 100%;
+        width: 100%;
+        height: 1200px;
+        background-color: #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
+}
+
+@media (max-width: 1680px) {
+
+    /* Các quy tắc CSS cho desktop lớn */
+    .content-left-top {
+        padding-left: 100px;
+    }
+
+    .content-left-top p {
+        font-size: 24px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #677B93;
+        padding-bottom: 30px;
+        text-align: left;
+    }
+
+    .content-left {
+        padding-left: 0px;
+    }
+
+    .content-left p {
+        font-size: 24px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #677B93;
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    .contact-content {
+        text-align: left;
         width: 90%;
     }
 
@@ -174,7 +318,7 @@
     }
 
     .contact-container {
-        height: 450px;
+        height: 100%;
 
     }
 
@@ -184,9 +328,6 @@
 
     }
 
-    .contact-info {
-        width: 100% 
-    }
 
     .contact-row-content {
         width: 100%;
@@ -199,7 +340,7 @@
     }
 
     .contact-info {
-        width: 100%;
+        width: 90%;
     }
 
 
@@ -207,14 +348,14 @@
         display: flex;
         max-width: 1600px;
         width: 1400px;
-        height: 500px;
+        height: 1600px;
         overflow-x: hidden;
         justify-content: center;
         gap: 20px;
     }
 
     .employ-img {
-        height: 500px;
+        height: 100%;
     }
 
     .text-overlay {
@@ -237,7 +378,7 @@
 
     }
 
-    .icon-right {
+    .icon-right-1 {
         padding-right: 26px;
         width: 24px;
         height: 24px;
@@ -255,7 +396,7 @@
     .text-readmore {
         padding: 10px;
     }
-    
+
     .content-right {
         max-width: 700px;
         align-items: center;
@@ -263,11 +404,12 @@
         padding-right: 20px;
         text-align: left;
     }
+
     .employ-container {
         max-width: 100%;
         width: 100%;
         height: 950px;
-         background-color: #e5e5e5;
+        background-color: #e5e5e5;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -304,7 +446,7 @@
     }
 
     .contact-content {
-        text-align:left;
+        text-align: left;
         width: 90%;
         /* width: 100%; */
     }
@@ -315,18 +457,15 @@
     }
 
     .contact-container {
-        height: 450px;
+        height: 100%;
+     
 
     }
 
     .contact-row {
         gap: 20px;
         flex-direction: row;
-        width: 1200px;
-    }
-
-    .contact-info {
-        width: 100%;
+        max-width: 150%;
     }
 
     .contact-row-content {
@@ -340,22 +479,22 @@
     }
 
     .contact-info {
-        width: 80%;
+        width: 55%;
     }
 
 
     .image-container {
         display: flex;
-        max-width: 1200px;
+        max-width: 13   00px;
         width: 98%;
-        height: 550px;
+        height: 1200px;
         overflow-x: hidden;
         justify-content: center;
         gap: 20px;
     }
 
     .employ-img {
-        height: 550px;
+        height: 100%;
     }
 
     .text-overlay {
@@ -378,7 +517,7 @@
 
     }
 
-    .icon-right {
+    .icon-right-1 {
         padding-right: 26px;
         width: 24px;
         height: 24px;
@@ -396,7 +535,7 @@
     .text-readmore {
         padding: 10px;
     }
-    
+
     .content-right {
         max-width: 700px;
         align-items: center;
@@ -404,6 +543,7 @@
         padding-right: 0px;
         text-align: left;
     }
+
     .employ-container {
         max-width: 100%;
         width: 100%;
@@ -415,15 +555,15 @@
         /* justify-content: center; */
     }
 
-  
+
 
 }
 
 @media (max-width: 1200px) {
     /* Các quy tắc CSS cho desktop lớn */
 
-     /* Các quy tắc CSS cho desktop nhỏ */
-     .content-right-top {
+    /* Các quy tắc CSS cho desktop nhỏ */
+    .content-right-top {
         display: none;
     }
 
@@ -468,7 +608,7 @@
     }
 
     .contact-container {
-        height: 450px;
+        height: 100%;
 
     }
 
@@ -478,9 +618,6 @@
 
     }
 
-    .contact-info {
-        width: 100%;
-    }
 
     .contact-row-content {
         width: 100%;
@@ -493,7 +630,7 @@
     }
 
     .contact-info {
-        width: 80%;
+        width: 60%;
     }
 
 
@@ -501,19 +638,19 @@
         display: flex;
         max-width: 1200px;
         width: 98%;
-        height: 550px;
+        height: 900px;
         overflow-x: hidden;
         justify-content: center;
         gap: 20px;
     }
 
     .employ-img {
-        height: 550px;
+        height: 85%;
     }
 
     .text-overlay {
         width: 50%;
-        padding-bottom: 0px;
+        padding-bottom: 90px;
         padding-left: 20px;
 
         h2 {
@@ -531,7 +668,7 @@
 
     }
 
-    .icon-right {
+    .icon-right-1 {
         padding-right: 26px;
         width: 24px;
         height: 24px;
@@ -577,7 +714,13 @@
 
 /* Desktop nhỏ */
 @media (max-width: 1024px) {
-
+    .feature-content {
+        flex-direction: column;
+    }
+    .feature-content-child {
+        max-width: 100%;
+    }
+    
     /* Các quy tắc CSS cho desktop nhỏ */
     .content-right-top {
         display: none;
@@ -609,7 +752,7 @@
         color: #677B93;
         margin-bottom: 50px;
         margin-top: 200px;
-        
+
 
         text-align: left;
 
@@ -626,17 +769,13 @@
     }
 
     .contact-container {
-        height: 400px;
+        height: 100%;
 
     }
 
     .contact-row {
         gap: 0;
         flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-info {
         width: 100%;
     }
 
@@ -659,7 +798,7 @@
         display: flex;
         max-width: 1000px;
         width: 90%;
-        height: 450px;
+        height: 500px;
         overflow-x: hidden;
         justify-content: center;
         /* padding: 0px 70px; */
@@ -668,12 +807,12 @@
     }
 
     .employ-img {
-        height:450px;
+        height: 85%;
     }
 
     .text-overlay {
         width: 50%;
-        padding-bottom: 0px;
+        padding-bottom: 80px;
         padding-left: 20px;
 
         h2 {
@@ -691,7 +830,7 @@
 
     }
 
-    .icon-right {
+    .icon-right-1 {
         padding-right: 26px;
         width: 24px;
         height: 24px;
@@ -784,17 +923,13 @@
     }
 
     .contact-container {
-        height: 450px;
+        height: 100%;
 
     }
 
     .contact-row {
         gap: 0;
         flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-info {
         width: 100%;
     }
 
@@ -826,7 +961,7 @@
     }
 
     .employ-img {
-        height: 400px;
+        height: 85%;
     }
 
     .text-overlay {
@@ -848,7 +983,7 @@
 
     }
 
-    .icon-right {
+    .icon-right-1 {
         padding-right: 12px;
         width: 16px;
         height: 16px;
@@ -893,7 +1028,7 @@
 
 /* Mobile */
 @media (max-width: 480px) {
-
+   
     .content-right-top {
         display: none;
     }
@@ -927,9 +1062,11 @@
         padding-top: 0px;
 
     }
+
     .contact-content {
         text-align: left;
         width: 100%;
+        padding-top: 50px;
     }
 
     .contact-container p {
@@ -938,20 +1075,16 @@
     }
 
     .contact-container {
-        height: 350px;
-
+        height: 100%;
     }
 
     .contact-row {
         gap: 0;
         flex-direction: column;
         width: 100%;
-        
+
     }
 
-    .contact-info {
-        width: 100%;
-    }
 
     .contact-row-content {
         width: 100%;
@@ -964,7 +1097,7 @@
     }
 
     .contact-info {
-        width: 300px;
+        width: 80%;
     }
 
 
@@ -972,7 +1105,7 @@
         display: flex;
         max-width: 1000px;
         width: 95%;
-        height: 400px;
+        height: 500px;
         overflow-x: hidden;
         justify-content: center;
         /* padding: 0px 70px; */
@@ -981,13 +1114,14 @@
     }
 
     .employ-img {
-        height: 180px;
+        height: 85%;
     }
-
+    
     .text-overlay {
         width: 90%;
         left: 0;
         padding-bottom: 30px;
+
         h2 {
             font-size: 14px;
             padding-left: 0px;
@@ -1002,13 +1136,31 @@
 
     }
 
-    .icon-right {
-        padding-right: 12px;
+
+ 
+
+
+    .icon-right-1 {
+        padding-right: 8px;
         width: 16px;
         height: 16px;
 
     }
 
+
+    .bi-arrow-right-circle1 {
+        height: 20px;
+        width: 20px;
+    }
+
+    .text-readmore {
+        padding: 5px;
+        font-size: 10px;
+        padding-top: 60px;
+    }
+    .employ-content{
+        padding-top: 50px;
+    }
     .read-more {
         top: 0px;
         font-size: 9px;
@@ -1016,16 +1168,10 @@
 
     }
 
-    .text-readmore {
-        padding: 5px;
-    }
-
-  
-
     .employ-container {
         max-width: 100%;
         width: 100%;
-        height: 490px;
+        height: 400px;
         background-color: #F5F6F6;
         display: flex;
         flex-direction: column;
