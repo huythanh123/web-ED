@@ -1,4 +1,20 @@
 //Huy
+
+
+
+function showArenaContent() {
+  document.getElementById("nav-content").style.display = "none"; // Ẩn nội dung chính
+  document.getElementById("arena-content").style.display = "block"; // Hiển thị nội dung Arena
+}
+
+function hideArenaContent() {
+  document.getElementById("nav-content").style.display = "block"; // Hiển thị lại nội dung chính
+  document.getElementById("arena-content").style.display = "none"; // Ẩn nội dung Arena
+}
+
+
+
+
 let lastScrollTop = 0;
 const header = document.querySelector("header");
 
@@ -70,11 +86,19 @@ function toggleMenu() {
   console.log(1);
 }
 
+
+
+
+function showMenuDrop() {
+  const dropMenu = document.querySelector(".drop-menu");
+  dropMenu.classList.toggle("show");
+  dropMenu.classList.toggle("show-menu-drop");
+}
+
 document.getElementById("areas-of-work").addEventListener("click", function () {
   const dropMenu = document.querySelector(".drop-menu");
   dropMenu.classList.toggle("show");
 });
-
 const banner = document.querySelector(".banner");
 
 function handleScroll(event) {
@@ -136,7 +160,6 @@ window.addEventListener("load", function () {
 //
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Kiểm tra kích thước màn hình
   if (window.innerWidth > 1200) {
     const jobsContentUp = document.getElementsByClassName('contact-container')[0];
     if (jobsContentUp) {
@@ -178,11 +201,22 @@ document.addEventListener('DOMContentLoaded', () => {
             titleElement.style.transition = 'color 0.3s ease';
           }
 
-          // Đảm bảo chúng ta đang thay đổi màu cho phần tử path của SVG
+          // Đổi màu biểu tượng hiện tại thành trắng
           const iconColor = child.querySelectorAll('.svg-icon path');
           iconColor.forEach(icon => {
             icon.style.fill = 'white';
             icon.style.transition = 'fill 0.3s ease';
+          });
+
+          // Các biểu tượng khác sẽ mờ đi khi di chuột vào biểu tượng hiện tại
+          jobsChildren.forEach(otherChild => {
+            if (otherChild !== child) {
+              const otherIcons = otherChild.querySelectorAll('.svg-icon path');
+              otherIcons.forEach(icon => {
+                icon.style.fill = 'white';  // Màu trắng mờ
+                icon.style.opacity = '0.3'; // Đặt opacity thấp hơn
+              });
+            }
           });
 
           icons.forEach(icon => {
@@ -190,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
 
+        // Reset lại màu và opacity khi di chuột ra khỏi biểu tượng
         child.addEventListener('mouseout', () => {
           jobsContentUp.style.backgroundColor = '#F5F6F6';
           jobsContentUp.style.background = '#F5F6F6';
@@ -210,10 +245,20 @@ document.addEventListener('DOMContentLoaded', () => {
             titleElement.style.color = '';
           }
 
-          // Đặt lại màu của icon SVG sau khi di chuột ra ngoài
+          // Đặt lại màu gốc và opacity cho biểu tượng hiện tại
           const iconColor = child.querySelectorAll('.svg-icon path');
           iconColor.forEach(icon => {
             icon.style.fill = ''; // Quay lại màu gốc
+            icon.style.opacity = ''; // Reset lại opacity
+          });
+
+          // Reset lại các biểu tượng khác
+          jobsChildren.forEach(otherChild => {
+            const otherIcons = otherChild.querySelectorAll('.svg-icon path');
+            otherIcons.forEach(icon => {
+              icon.style.fill = '';  // Trả lại màu ban đầu
+              icon.style.opacity = ''; // Reset opacity
+            });
           });
 
           icons.forEach(icon => {
@@ -226,6 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
 
 
 let activeImage = null;

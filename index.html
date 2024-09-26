@@ -68,7 +68,7 @@
             <!-- NAV -->
 
             <!-- NAV MOBILE -->
-            <div class="hidden-list-mobile d-lg-none">
+            <div class="hidden-list-mobile d-lg-none" id="nav-mobile">
               <div class="lm-header">
                 <div class="bi-x-container" onclick="toggleMenu()">
                   <i class="bi bi-x-lg"></i>
@@ -77,28 +77,26 @@
                   <div class="lm-content-up">
                     <a href="https://www.metacareers.com/jobs">Jobs</a>
                   </div>
-                  <div class="lm-content-up">
-                    <a href="https://www.metacareers.com/jobs">Arena of Work
-                    </a>
+                  <div class="lm-content-up" onclick="showArenaContent()">
+                    <a href="javascript:void(0)">Arena of Work</a>
                     <i class="bi bi-chevron-right"></i>
                   </div>
                   <div class="lm-content-up">
-                    <a href="https://www.metacareers.com/jobs">Locations </a>
+                    <a href="https://www.metacareers.com/jobs">Locations</a>
                   </div>
                   <div class="lm-content-up">
-                    <a href="https://www.metacareers.com/jobs">Career Programs
-                    </a>
+                    <a href="https://www.metacareers.com/jobs">Career Programs</a>
                     <i class="bi bi-chevron-right"></i>
                   </div>
                   <div class="lm-content-up">
-                    <a href="https://www.metacareers.com/jobs">How we work </a>
+                    <a href="https://www.metacareers.com/jobs">How we work</a>
                     <i class="bi bi-chevron-right"></i>
                   </div>
                   <div class="lm-content-up" style="border-bottom: 1px solid grey">
-                    <a href="https://www.metacareers.com/jobs">Blogs </a>
+                    <a href="https://www.metacareers.com/jobs">Blogs</a>
                   </div>
                 </div>
-                <div class="lm-container-down">
+                <div class="lm-container-down" id="nav-content">
                   <div class="lm-down">
                     <div class="lm-down-h2">Create Career Profile</div>
                   </div>
@@ -110,9 +108,7 @@
                   </div>
                   <div class="lm-down">
                     <div class="btn-down">
-                      <a href="https://www.metacareers.com/signup/">
-                        Create Career Profile
-                      </a>
+                      <a href="https://www.metacareers.com/signup/">Create Career Profile</a>
                     </div>
                   </div>
                   <div class="lm-down">
@@ -126,7 +122,137 @@
                 </div>
               </div>
             </div>
+
+            <!-- CONTENT FOR ARENA OF WORK -->
+            <div id="arena-content" class="hidden" style="display: none">
+              <div class="arena-header">
+                <h2>Arena of Work</h2>
+                <span onclick="hideArenaContent()" class="close">&times;</span>
+              </div>
+              <div class="arena-body">
+                <div class="row">
+                  <div class="col-lg-4 col-12 column-1"></div>
+                  <div class="col-lg-4 col-12 column-2">
+                    <h6>By Technology</h6>
+                    <ul class="box-link">
+                      <li>
+                        <a href="https://www.metacareers.com/areas-of-work/FacebookApp/"><i
+                            class="bi bi-facebook"></i>Facebook</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/areas-of-work/instagram/"><i
+                            class="bi bi-instagram"></i>Instagram</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/areas-of-work/messenger/"><i
+                            class="bi bi-messenger"></i>Messenger</a>
+                      </li>
+                      <div class="icon-none d-lg-none">
+                        <li>
+                          <a href="https://www.metacareers.com/areas-of-work/oculus/"><i class="bi bi-meta"></i>Meta
+                            Quest</a>
+                        </li>
+                        <li>
+                          <a href="https://www.metacareers.com/areas-of-work/whatsapp/"><i
+                              class="bi bi-whatsapp"></i>WhatsApp</a>
+                        </li>
+                        <li>
+                          <a href="https://www.metacareers.com/areas-of-work/workplace"><i
+                              class="img bi-wordpress"></i>Workplace</a>
+                        </li>
+                      </div>
+                    </ul>
+                    <br />
+                    <h6>Theo lĩnh vực</h6>
+                    <ul>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Advertising
+                          Technology</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">AR and VR</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Artificial
+                          Intelligence</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Business
+                          Development and Partnerships</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Communications and
+                          Public Policy</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Creative</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Data and
+                          Analytics</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Design and User
+                          Experience</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Enterprise
+                          Engineering</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Global
+                          Operations</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 col-12 column-3">
+                    <br />
+
+                    <ul>
+                      <div class="icon-show">
+                        <li>
+                          <a href="https://www.metacareers.com/areas-of-work/oculus/"><i class="bi bi-meta"></i>Meta
+                            Quest</a>
+                        </li>
+                        <li>
+                          <a href="https://www.metacareers.com/areas-of-work/whatsapp/"><i
+                              class="bi bi-whatsapp"></i>WhatsApp</a>
+                        </li>
+                        <li>
+                          <a href="https://www.metacareers.com/areas-of-work/workplace"><i
+                              class="bi bi-whatsapp"></i>Workplace</a>
+                        </li>
+                      </div>
+                      <div class="pd"></div>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Infrastructure
+                          Legal</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Finance</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Facilities and
+                          Administration</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">People and
+                          Recruiting</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Product
+                          Management</a>
+                      </li>
+                      <li>
+                        <a href="https://www.metacareers.com/jobs?teams[0]=Advertising%20Technology">Research</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- NAV MOBILE -->
+
 
             <!-- Login  -->
             <div class="col-1 text-start login" id="login-icon" onclick="openLogin()">
@@ -203,8 +329,15 @@
                         class="bi bi-whatsapp"></i>WhatsApp</a>
                   </li>
                   <li>
-                    <a href="https://www.metacareers.com/areas-of-work/workplace"><i
-                        class="bi bi-whatsapp"></i>Workplace</a>
+                    <a href="https://www.metacareers.com/areas-of-work/workplace"><svg id="svg-workplace"
+                        class="svg-icon" viewBox="0 0 55 55" style="
+                      transition: background-color 0.5s ease-in-out;
+                    " xmlns="http://www.w3.org/2000/svg">
+                        <title>Workplace icon</title>
+                        <path clip-rule="evenodd"
+                          d="M36.1541 29.9422C35.5956 30.6066 34.5758 31.637 32.9667 31.637C30.6942 31.637 29.961 30.0108 29.2718 28.2907L25.8586 19.9398L22.4592 28.2907C21.8793 29.7152 21.2521 31.6409 18.7616 31.6409C16.2711 31.6409 15.6395 29.7146 15.0596 28.2907L9.32671 14.2418H14.1606L18.7611 25.8044L22.1896 17.376C22.7327 16.0417 23.3791 14.028 25.8548 14.028C28.331 14.028 28.9824 16.0433 29.5272 17.376L33.2566 26.5012C34.7586 24.2441 35.6329 21.5369 35.6329 18.6263C35.6329 10.741 29.213 4.34827 21.2928 4.34827C16.7725 4.34827 12.5229 6.10142 9.32671 9.28403C6.12994 12.4666 4.37092 16.6984 4.37092 21.1994C4.37092 25.7005 6.13433 29.9323 9.3311 33.1149C12.5279 36.2975 16.7835 38.0506 21.3043 38.0506C22.8557 38.0506 24.3956 37.8385 25.8784 37.4274V41.9048C24.3665 42.2318 22.8497 42.3994 21.3043 42.3994C18.431 42.3994 15.6302 41.8389 13.004 40.7326C10.4684 39.6647 8.19155 38.1364 6.23648 36.1903C4.28195 34.2443 2.74699 31.9772 1.67445 29.4525C0.563458 26.8376 0 24.0611 0 21.2C0 18.3389 0.563458 15.5624 1.6739 12.9475C2.74644 10.4228 4.2814 8.15575 6.23593 6.20969C8.19046 4.26363 10.4674 2.73525 13.0035 1.66742C15.6302 0.56057 18.4189 0 21.2922 0C31.6245 0 40 8.33986 40 18.6269C40 22.8828 38.5666 26.8052 36.1541 29.9422Z"
+                          fill="currentColor" fill-rule="evenodd"></path>
+                      </svg>Workplace</a>
                   </li>
                 </div>
               </ul>
@@ -262,8 +395,15 @@
                         class="bi bi-whatsapp"></i>WhatsApp</a>
                   </li>
                   <li>
-                    <a href="https://www.metacareers.com/areas-of-work/workplace"><i
-                        class="bi bi-whatsapp"></i>Workplace</a>
+                    <a href="https://www.metacareers.com/areas-of-work/workplace"><svg id="svg-workplace"
+                        class="svg-icon" viewBox="0 0 55 55" style="
+                        transition: background-color 0.5s ease-in-out;
+                      " xmlns="http://www.w3.org/2000/svg">
+                        <title>Workplace icon</title>
+                        <path clip-rule="evenodd"
+                          d="M36.1541 29.9422C35.5956 30.6066 34.5758 31.637 32.9667 31.637C30.6942 31.637 29.961 30.0108 29.2718 28.2907L25.8586 19.9398L22.4592 28.2907C21.8793 29.7152 21.2521 31.6409 18.7616 31.6409C16.2711 31.6409 15.6395 29.7146 15.0596 28.2907L9.32671 14.2418H14.1606L18.7611 25.8044L22.1896 17.376C22.7327 16.0417 23.3791 14.028 25.8548 14.028C28.331 14.028 28.9824 16.0433 29.5272 17.376L33.2566 26.5012C34.7586 24.2441 35.6329 21.5369 35.6329 18.6263C35.6329 10.741 29.213 4.34827 21.2928 4.34827C16.7725 4.34827 12.5229 6.10142 9.32671 9.28403C6.12994 12.4666 4.37092 16.6984 4.37092 21.1994C4.37092 25.7005 6.13433 29.9323 9.3311 33.1149C12.5279 36.2975 16.7835 38.0506 21.3043 38.0506C22.8557 38.0506 24.3956 37.8385 25.8784 37.4274V41.9048C24.3665 42.2318 22.8497 42.3994 21.3043 42.3994C18.431 42.3994 15.6302 41.8389 13.004 40.7326C10.4684 39.6647 8.19155 38.1364 6.23648 36.1903C4.28195 34.2443 2.74699 31.9772 1.67445 29.4525C0.563458 26.8376 0 24.0611 0 21.2C0 18.3389 0.563458 15.5624 1.6739 12.9475C2.74644 10.4228 4.2814 8.15575 6.23593 6.20969C8.19046 4.26363 10.4674 2.73525 13.0035 1.66742C15.6302 0.56057 18.4189 0 21.2922 0C31.6245 0 40 8.33986 40 18.6269C40 22.8828 38.5666 26.8052 36.1541 29.9422Z"
+                          fill="currentColor" fill-rule="evenodd"></path>
+                      </svg>Workplace</a>
                   </li>
                 </div>
                 <div class="pd"></div>
@@ -532,18 +672,20 @@
           </a>
           <a href="https://www.metacareers.com/areas-of-work/messenger/?p[divisions][0]=Messenger&divisions[0]=Messenger"
             class="contact-row-content" id="child-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="url(#messenger-gradient)" class="bi bi-messenger svg-icon" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="url(#messenger-gradient)"
+              class="bi bi-messenger svg-icon" viewBox="0 0 16 16">
               <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:rgb(10, 124, 255);stop-opacity:1" />
-                <stop offset="40%" style="stop-color:rgb(161, 14, 235);stop-opacity:1" />
-                <stop offset="60%" style="stop-color:rgb(255, 82, 151);stop-opacity:1" />
-                <stop offset="100%" style="stop-color:rgb(255, 108, 92);stop-opacity:1" />
-              </linearGradient>
-            </defs>
-              <path fill="url(#grad1)" d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:rgb(10, 124, 255);stop-opacity:1" />
+                  <stop offset="40%" style="stop-color:rgb(161, 14, 235);stop-opacity:1" />
+                  <stop offset="60%" style="stop-color:rgb(255, 82, 151);stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:rgb(255, 108, 92);stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#grad1)"
+                d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
             </svg>
-            
+
             <p id="fb-title" class="icon-title">Messenger</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="arrow-down bi bi-arrow-right-circle" viewBox="0 0 16 16">
@@ -555,7 +697,8 @@
         <div class="contact-row row-2">
           <a href="https://www.metacareers.com/areas-of-work/instagram/?p[divisions][0]=Instagram&divisions[0]=Instagram"
             class="contact-row-content" id="child-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="url(#instagram-gradient)" class="bi bi-instagram svg-icon" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="url(#instagram-gradient)"
+              class="bi bi-instagram svg-icon" viewBox="0 0 16 16">
               <defs>
                 <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" style="stop-color:#f09433;stop-opacity:1" />
@@ -565,9 +708,10 @@
                   <stop offset="100%" style="stop-color:#bc1888;stop-opacity:1" />
                 </linearGradient>
               </defs>
-              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
             </svg>
-            
+
             <p id="fb-title" class="icon-title">Instagram</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="arrow-down bi bi-arrow-right-circle" viewBox="0 0 16 16">

@@ -118,7 +118,7 @@ header:not(.header-hidden) {
     position: absolute;
     top: 10%;
     border: 1px solid #ccc;
-    padding: 30px 0;
+    padding: 30px 0px;
     z-index: 1000;
     opacity: 0;
     max-height: 0;
@@ -185,7 +185,7 @@ header:not(.header-hidden) {
     margin-right: 10px; 
     font-size: 25px;
     color: #38444F; 
-
+    padding-left: 10px;
   }
   .column-2 ul li a:hover {
     text-decoration: underline !important;
@@ -213,6 +213,7 @@ header:not(.header-hidden) {
     margin-right: 10px; 
     font-size: 25px;
     color: #38444F; 
+    padding-left: 10 !important;
 
   }
   .column-3 ul li a:hover {
@@ -379,6 +380,7 @@ color: #1c1e21;
     line-height: 24px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: -15px;
+    padding-top: 20px;
 
 }
 .btn-down{
@@ -403,6 +405,36 @@ color: #1c1e21;
 .hidden-list-mobile.show-menu {
     display: block; 
   }
+
+  
+  .hidden {
+    display: none; /* Ẩn nội dung */
+}
+
+/* Styles for arena content */
+#arena-content {
+    padding: 20px;
+    background-color: white;
+    position: fixed; /* Đảm bảo nó luôn ở trên */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Chiếm toàn bộ chiều rộng */
+    height: 100vh; /* Chiếm toàn bộ chiều cao */
+    z-index: 1001; /* Đảm bảo nằm trên nav mobile */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Đổ bóng cho nội dung */
+    overflow: auto; /* Cuộn nội dung nếu cần */
+}
+
+.arena-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 24px;
+}
 /* NAV MOBILE  */
 
 /* BANNER  */
@@ -617,7 +649,10 @@ color: #1c1e21;
 /* BANNER  */
 
 @media (max-width: 991px) {
-   
+   .col-12 h1{
+    text-align: center;
+   }
+
     #hamburger {
         display: block; 
     }
@@ -638,6 +673,10 @@ color: #1c1e21;
 
     .icon-show {
         display: none;
+    }
+
+    .column-1 {
+        display: none !important;
     }
 
     .column-2 {
@@ -3928,4 +3967,11 @@ a {
         height: 500px;
         /* margin-left: 830px; */
     }
+}
+
+
+
+
+.bi-meta{
+    padding-left: 10px;
 }
