@@ -1142,7 +1142,11 @@ a {
     height: 35px !important;
     padding-left: 10px;
 }
-
+.icon-img{
+    width: 45px !important;
+    height: 35px !important;
+    padding-left: 10px;
+}
 .icon-title {
     margin: 0px 0px 0px 20px;
     font-size: 17px;
