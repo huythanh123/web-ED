@@ -138,110 +138,95 @@ window.addEventListener("load", function () {
 document.addEventListener('DOMContentLoaded', () => {
   // Kiểm tra kích thước màn hình
   if (window.innerWidth > 1200) {
-      const jobsContentUp = document.getElementsByClassName('contact-container')[0];
-      if (jobsContentUp) {
-          const jobsChildren = document.querySelectorAll('.contact-row-content');
+    const jobsContentUp = document.getElementsByClassName('contact-container')[0];
+    if (jobsContentUp) {
+      const jobsChildren = document.querySelectorAll('.contact-row-content');
 
-          jobsChildren.forEach(child => {
-              const icons = child.querySelectorAll('.arrow-down');
+      jobsChildren.forEach(child => {
+        const icons = child.querySelectorAll('.arrow-down');
 
-              child.addEventListener('mouseover', () => {
-                  const contentLeft = document.querySelector('.content-left-top .title-content-left');
-                  const contentRight = document.querySelector('.content-right-top .title-content-left-2');
+        child.addEventListener('mouseover', () => {
+          const contentLeft = document.querySelector('.content-left-top .title-content-left');
+          const contentRight = document.querySelector('.content-right-top .title-content-left-2');
 
-                  if (contentLeft) {
-                      contentLeft.style.color = 'white';
-                  }
+          if (contentLeft) {
+            contentLeft.style.color = 'white';
+          }
 
-                  if (contentRight) {
-                      contentRight.style.color = 'white';
-                  }
+          if (contentRight) {
+            contentRight.style.color = 'white';
+          }
 
-                  const titleElement = child.querySelector('.icon-title');
-                  if (titleElement) {
-                      const text = titleElement.textContent;
-                      if (text === 'Facebook') {
-                          jobsContentUp.style.backgroundColor = '#296ae1';
-                      } else if (text === 'Messenger'|| text === 'Tin nhắn') {
-                          jobsContentUp.style.background = 'linear-gradient(90deg, rgb(10, 124, 255) 0%, rgb(161, 14, 235) 40%, rgb(255, 82, 151) 60%, rgb(255, 108, 92) 100%)';
-                          const imgMessenger = child.querySelector('img');
-                          if (imgMessenger) {
-                              imgMessenger.style.filter = 'brightness(0) invert(1)';
-                          }
-                      } else if (text === 'Instagram') {
-                          jobsContentUp.style.background = 'linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)';
-                          const imgInstagram = child.querySelector('img');
-                          if (imgInstagram) {
-                              imgInstagram.style.filter = 'brightness(0) invert(1)';
-                          }
-                      } else if (text === 'WhatsApp') {
-                          jobsContentUp.style.backgroundColor = '#25D366';
-                      } else if (text === 'Meta Quest'|| text === 'Nhiệm vụ Meta') {
-                          jobsContentUp.style.backgroundColor = '#000000';
-                      } else if (text === 'Workplace' || text === 'Nơi làm việc') {
-                          jobsContentUp.style.backgroundColor = '#20252D';
-                      }
+          const titleElement = child.querySelector('.icon-title');
+          if (titleElement) {
+            const text = titleElement.textContent;
+            if (text === 'Facebook') {
+              jobsContentUp.style.backgroundColor = '#296ae1';
+            } else if (text === 'Messenger' || text === 'Tin nhắn') {
+              jobsContentUp.style.background = 'linear-gradient(90deg, rgb(10, 124, 255) 0%, rgb(161, 14, 235) 40%, rgb(255, 82, 151) 60%, rgb(255, 108, 92) 100%)';
+            } else if (text === 'Instagram') {
+              jobsContentUp.style.background = 'linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)';
+            } else if (text === 'WhatsApp') {
+              jobsContentUp.style.backgroundColor = '#25D366';
+            } else if (text === 'Meta Quest' || text === 'Nhiệm vụ Meta') {
+              jobsContentUp.style.backgroundColor = '#000000';
+            } else if (text === 'Workplace' || text === 'Nơi làm việc') {
+              jobsContentUp.style.backgroundColor = '#20252D';
+            }
 
-                      titleElement.style.color = 'white';
-                      titleElement.style.transition = 'color 0.3s ease';
-                  }
+            titleElement.style.color = 'white';
+            titleElement.style.transition = 'color 0.3s ease';
+          }
 
-                  const iconColor = child.querySelectorAll('.svg-icon');
-                  iconColor.forEach(icon => {
-                      icon.style.fill = 'white';
-                      icon.style.transition = 'fill 0.3s ease';
-                  });
-
-                  icons.forEach(icon => {
-                      icon.style.display = 'flex';
-                  });
-              });
-
-              child.addEventListener('mouseout', () => {
-                  jobsContentUp.style.backgroundColor = '#F5F6F6';
-                  jobsContentUp.style.background = '#F5F6F6';
-
-                  const contentLeft = document.querySelector('.content-left-top .title-content-left');
-                  const contentRight = document.querySelector('.content-right-top .title-content-left-2');
-
-                  if (contentLeft) {
-                      contentLeft.style.color = '';
-                  }
-
-                  if (contentRight) {
-                      contentRight.style.color = '';
-                  }
-
-                  const titleElement = child.querySelector('.icon-title');
-                  if (titleElement) {
-                      titleElement.style.color = '';
-                  }
-
-                  const iconColor = child.querySelectorAll('.svg-icon');
-                  iconColor.forEach(icon => {
-                      icon.style.fill = '';
-                  });
-
-                  const imgMessenger = child.querySelector('img');
-                  if (imgMessenger) {
-                      imgMessenger.style.filter = '';
-                  }
-
-                  const imgInstagram = child.querySelector('img');
-                  if (imgInstagram) {
-                      imgInstagram.style.filter = '';
-                  }
-
-                  icons.forEach(icon => {
-                      icon.style.display = 'none';
-                  });
-              });
+          // Đảm bảo chúng ta đang thay đổi màu cho phần tử path của SVG
+          const iconColor = child.querySelectorAll('.svg-icon path');
+          iconColor.forEach(icon => {
+            icon.style.fill = 'white';
+            icon.style.transition = 'fill 0.3s ease';
           });
-      } else {
-          console.error('Element with class "contact-container" not found.');
-      }
+
+          icons.forEach(icon => {
+            icon.style.display = 'flex';
+          });
+        });
+
+        child.addEventListener('mouseout', () => {
+          jobsContentUp.style.backgroundColor = '#F5F6F6';
+          jobsContentUp.style.background = '#F5F6F6';
+
+          const contentLeft = document.querySelector('.content-left-top .title-content-left');
+          const contentRight = document.querySelector('.content-right-top .title-content-left-2');
+
+          if (contentLeft) {
+            contentLeft.style.color = '';
+          }
+
+          if (contentRight) {
+            contentRight.style.color = '';
+          }
+
+          const titleElement = child.querySelector('.icon-title');
+          if (titleElement) {
+            titleElement.style.color = '';
+          }
+
+          // Đặt lại màu của icon SVG sau khi di chuột ra ngoài
+          const iconColor = child.querySelectorAll('.svg-icon path');
+          iconColor.forEach(icon => {
+            icon.style.fill = ''; // Quay lại màu gốc
+          });
+
+          icons.forEach(icon => {
+            icon.style.display = 'none';
+          });
+        });
+      });
+    } else {
+      console.error('Element with class "contact-container" not found.');
+    }
   }
 });
+
 
 let activeImage = null;
 
