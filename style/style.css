@@ -752,6 +752,7 @@ html {
 
 .search-ip {
     width: 90%;
+    bottom: 10px;
     border: 2px solid transparent;
     border-radius: 5px;
     font-family: Helvetica, Arial, sans-serif;
