@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
   if (scrollTop > lastScrollTop) {
     // Cuộn xuống -> ẩn header
     header.classList.add("header-hidden");
-    header.classList.remove("header-active");
+    header.classList.remove("header-active", "header-border"); // Xóa border khi ẩn
   } else {
     // Cuộn lên -> hiện header
     header.classList.remove("header-hidden");
@@ -32,9 +32,10 @@ window.addEventListener("scroll", function () {
     // Nếu cuộn không phải về top -> đổi màu header thành trắng
     if (scrollTop > 0) {
       header.classList.add("header-active");
+      header.classList.add("header-border"); // Thêm border khi cuộn lên
     } else {
       // Nếu cuộn về vị trí đầu trang -> xóa lớp header-active để trở về như cũ
-      header.classList.remove("header-active");
+      header.classList.remove("header-active", "header-border"); // Xóa border khi ở đầu trang
     }
   }
 
@@ -99,28 +100,36 @@ document.getElementById("areas-of-work").addEventListener("click", function () {
   const dropMenu = document.querySelector(".drop-menu");
   dropMenu.classList.toggle("show");
 });
+
 const banner = document.querySelector(".banner");
+const bannerImage = document.querySelector(".banner-image img");
 
 function handleScroll(event) {
   const maxScrollLeft = banner.scrollWidth - banner.clientWidth;
+  const scrollRatio = banner.scrollLeft / maxScrollLeft;
 
+  // Điều chỉnh vị trí hình ảnh dựa trên vị trí cuộn
+  const translateX = scrollRatio * 60; // Tùy chỉnh hệ số này để điều chỉnh tốc độ dịch chuyển
+  bannerImage.style.transform = `translateX(${translateX}%)`;
+
+  // Kiểm tra nếu cuộn hết chiều ngang của banner
   if (banner.scrollLeft >= maxScrollLeft && event.deltaY > 0) {
-    // Nếu đã cuộn hết và cuộn tiếp, cho phép cuộn trang
+    // Cho phép cuộn xuống trang khi đã cuộn hết chiều ngang
     window.scrollBy({
-      top: event.deltaY, // Cuộn xuống dưới phần body
+      top: event.deltaY, // Sử dụng event.deltaY để cuộn xuống
       behavior: "smooth",
     });
   } else if (banner.scrollLeft === 0 && event.deltaY < 0) {
-    // Nếu đã ở đầu danh sách và cuộn ngược lại, cho phép cuộn trang lên trên
+    // Cho phép cuộn lên trang khi ở đầu banner và cuộn ngược lại
     window.scrollBy({
-      top: event.deltaY, // Cuộn lên trên phần body
+      top: event.deltaY,
       behavior: "smooth",
     });
   } else {
-    // Vẫn ở trong vùng có thể cuộn ngang, ngăn cuộn trang và chỉ cuộn ngang
+    // Khi chưa cuộn hết banner, ngăn cuộn trang và chỉ cuộn ngang trong banner
     event.preventDefault();
     banner.scrollBy({
-      left: event.deltaY > 0 ? 200 : -200,
+      left: event.deltaY > 0 ? 300 : -300, // Cuộn ngang khi cuộn chuột
       behavior: "smooth",
     });
   }
@@ -128,6 +137,8 @@ function handleScroll(event) {
 
 // Gắn sự kiện cuộn cho phần banner
 banner.addEventListener("wheel", handleScroll);
+
+
 
 const navLinks = document.querySelectorAll("nav ul li a");
 
@@ -160,7 +171,7 @@ window.addEventListener("load", function () {
 //
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.innerWidth > 1200) {
+  if (window.innerWidth > 1201) {
     const jobsContentUp = document.getElementsByClassName('contact-container')[0];
     if (jobsContentUp) {
       const jobsChildren = document.querySelectorAll('.contact-row-content');
@@ -318,8 +329,9 @@ function employImgClickLarge(index) {
         if (idx === index) {
             if (activeImage !== index) {
                 container.classList.add('active');
-                container.style.flexBasis = "350%";
-                container.style.flexGrow = "4";
+                container.style.flexBasis = "300%";
+                container.style.flexGrow = "4%";
+                container.style.marginTop = "0%";
                 container.style.height = "auto";
                 container.style.transform = "translateY(0)";
                 activeImage = index;
@@ -328,15 +340,9 @@ function employImgClickLarge(index) {
             if (idx % 2 === 1) {
                 container.style.flexBasis = "20%";
                 container.style.flexGrow = "1";
-                // container.style.marginTop = "100px";
+                container.style.marginTop = "4%";
                 container.style.height = "90%";
-                container.style.transform = "translateY(60px)";
-            
-                // if (window.matchMedia("(max-width: 2496px)").matches) {
-                //     container.style.marginTop = "80px";
-                //     container.style.height = "84%";
-                //     container.style.transform = "translateY(0px)";
-                // }
+                container.style.transform = "translateY(0px)";
             } else {
                 container.style.flexBasis = "20%";
                 container.style.flexGrow = "1";
@@ -351,16 +357,14 @@ function employImgClickLarge(index) {
 
 // Kiểm tra kích thước màn hình và áp dụng logic phù hợp
 function setupImageClick() {
-    const isSmallScreen = window.matchMedia("(max-width: 1199px)").matches;
+    const isSmallScreen = window.matchMedia("(max-width: 1201px)").matches;
 
     if (isSmallScreen) {
-        // Dành cho màn hình nhỏ hơn hoặc bằng 480px
         employImgClickSmall(0); // Mở hình thứ 2 khi trang tải
         document.querySelectorAll('.container1').forEach((container, index) => {
             container.addEventListener('click', () => employImgClickSmall(index));
         });
     } else {
-        // Dành cho màn hình lớn hơn 480px
         employImgClickLarge(1); // Mở hình thứ 2 khi trang tải
         document.querySelectorAll('.container1').forEach((container, index) => {
             container.addEventListener('click', () => employImgClickLarge(index));
@@ -377,6 +381,38 @@ window.addEventListener('resize', setupImageClick);
 
 
 //tuan
+// Tạo phần tử con trỏ tùy chỉnh lớn hơn bao ngoài
+const customCursorWrapper = document.createElement('div');
+customCursorWrapper.classList.add('custom-cursor-wrapper');
+
+// Tạo phần tử con trỏ tùy chỉnh
+const customCursor = document.createElement('div');
+customCursor.classList.add('custom-cursor');
+customCursor.textContent = 'D R A G'; // Thay đổi text theo nhu cầu
+
+// Thêm con trỏ nhỏ vào con trỏ lớn
+customCursorWrapper.appendChild(customCursor);
+document.body.appendChild(customCursorWrapper);
+
+// Lấy vùng div mà bạn muốn hiển thị con trỏ tùy chỉnh
+const scrollConnectContent = document.querySelector('.sroll-connect-content');
+
+// Cập nhật vị trí con trỏ tùy chỉnh dựa trên vị trí chuột
+scrollConnectContent.addEventListener('mousemove', (e) => {
+  customCursorWrapper.style.top = `${e.pageY}px`;
+  customCursorWrapper.style.left = `${e.pageX}px`;
+});
+
+// Khi di chuyển ra khỏi vùng div thì ẩn con trỏ tùy chỉnh
+scrollConnectContent.addEventListener('mouseleave', () => {
+  customCursorWrapper.style.display = 'none';
+});
+
+// Khi di chuyển vào vùng div thì hiển thị lại con trỏ
+scrollConnectContent.addEventListener('mouseenter', () => {
+  customCursorWrapper.style.display = 'block';
+});
+
 window.addEventListener('scroll',topDown = () => {
   var main = document.querySelector('.cn-title-1');
   var windowHeight = window.innerHeight;
