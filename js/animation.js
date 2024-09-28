@@ -138,7 +138,13 @@ function handleScroll(event) {
 // Gắn sự kiện cuộn cho phần banner
 banner.addEventListener("wheel", handleScroll);
 
-
+window.addEventListener('resize', function() {
+  if (document.activeElement.tagName === 'INPUT') {
+      document.body.style.paddingBottom = '300px'; // Thêm khoảng trống cho bàn phím
+  } else {
+      document.body.style.paddingBottom = '0px';
+  }
+});
 
 const navLinks = document.querySelectorAll("nav ul li a");
 
