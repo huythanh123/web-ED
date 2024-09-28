@@ -1116,10 +1116,10 @@ html {
   }
 
 
-@media(max-width: 421px) {
-        /* .seemore-content {
-            display: none !important;
-        } */
+@media(max-width: 430px) {
+    #wraper {
+        height: 750px;
+    }
 }
 
 
