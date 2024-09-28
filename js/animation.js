@@ -1,11 +1,11 @@
 //Huy
-window.addEventListener('resize', function() {
-  if (window.innerHeight < 500) { // Kiểm tra nếu chiều cao màn hình nhỏ (bàn phím xuất hiện)
-      document.querySelector('.search-ip').style.position = 'fixed';
-  } else {
-      document.querySelector('.search-ip').style.position = 'relative';
-  }
-});
+// window.addEventListener('resize', function() {
+//   if (window.innerHeight < 500) { // Kiểm tra nếu chiều cao màn hình nhỏ (bàn phím xuất hiện)
+//       document.querySelector('.search-ip').style.position = 'fixed';
+//   } else {
+//       document.querySelector('.search-ip').style.position = 'relative';
+//   }
+// });
 
 
 
