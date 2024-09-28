@@ -135,17 +135,16 @@ function handleScroll(event) {
   }
 }
 
-// Gắn sự kiện cuộn cho phần banner
-banner.addEventListener("wheel", handleScroll);
-
-window.addEventListener('resize', function() {
-  if (document.activeElement.tagName === 'INPUT') {
-      document.body.style.paddingBottom = '300px'; // Thêm khoảng trống cho bàn phím
-  } else {
-      document.body.style.paddingBottom = '0px';
-  }
+document.getElementById('searchButton').addEventListener('click', function() {
+  const searchInput = document.getElementById('searchInput');
+  searchInput.focus(); // Đặt tiêu điểm vào ô tìm kiếm
+  setTimeout(() => {
+      searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 300); // Thời gian chờ để đảm bảo bàn phím hiển thị
 });
 
+// Gắn sự kiện cuộn cho phần banner
+banner.addEventListener("wheel", handleScroll);
 const navLinks = document.querySelectorAll("nav ul li a");
 
 navLinks.forEach((link) => {

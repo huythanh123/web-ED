@@ -4,6 +4,7 @@
 }
 
 #wraper {
+    position: relative;
     width: 100%;
     height: 100vh;
     /* Chiều rộng chiếm toàn bộ viewport */
@@ -760,11 +761,7 @@ html {
     letter-spacing: .9px;
     line-height: 20px;
     padding: 3px;
-
-    background-color: transparent; /* Ẩn nền */
-    border: none; /* Loại bỏ viền */
-    color: transparent; /* Ẩn màu chữ */
-    caret-color: transparent; /* Ẩn con trỏ nhấp nháy */
+    background-color: white;
 }
 
 .search-ip:focus {
@@ -1083,7 +1080,7 @@ html {
     } */
 
     .search-ip {
-        width: 250px;
+        width: 100%;
         font-size: 14px;
     }
 }
@@ -1097,10 +1094,22 @@ html {
     } */
 
     .search-ip {
-        width: 250px;
+        width: 100%;
         font-size: 14px;
     }
 }
+
+@media (min-width: 800px) and (max-width: 900px) {
+    #wraper {
+        height: 60vh;
+    }
+
+    /* #search-banner {
+        bottom: auto;
+    } */
+  }
+
+
 @media(max-width: 421px) {
         /* .seemore-content {
             display: none !important;
@@ -1663,7 +1672,7 @@ html {
     /* Viền của vòng tròn bao */
     pointer-events: none;
     z-index: 9999;
-    display: flex;
+    display: none;
     align-items: center;
     /* Căn giữa chiều dọc */
     justify-content: center;
@@ -2429,6 +2438,12 @@ html {
 
 .feature-hidden {
     display: block;
+}
+
+@media (min-width: 2496px) and (max-width: 2496px) {
+    .banner {
+        margin-top: 400px !important;
+    }
 }
 
 @media (max-width: 2496px) {
